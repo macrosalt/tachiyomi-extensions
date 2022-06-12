@@ -7,6 +7,7 @@ on:
 
 env:
   CI_CHUNK_SIZE: 65
+  CI_MULTISRC: true
 
 jobs:
   prepare:
