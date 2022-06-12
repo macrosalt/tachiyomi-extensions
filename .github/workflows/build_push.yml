@@ -46,6 +46,7 @@ jobs:
         uses: gradle/gradle-command-action@v2
         with:
           arguments: :multisrc:generateExtensions
+          cache-disabled: true
 
       - name: Get number of modules
         run: |
