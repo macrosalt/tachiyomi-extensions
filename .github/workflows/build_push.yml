@@ -33,7 +33,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: 1.8
+          java-version: 1.7
       
       - name: Configure ver dependency
         run: |
@@ -42,11 +42,6 @@ jobs:
           export JAVA_TOOL_OPTIONS=-Dhttps.protocols=TLSv1.2
           echo $JAVA_TOOL_OPTIONS
           ./gradlew -version
-
-      - name: Set up JDK
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.7
 
       - name: Generate multisrc sources
         uses: gradle/gradle-command-action@v2
