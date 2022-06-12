@@ -37,6 +37,7 @@ jobs:
       
       - name: Configure ver dependency
         run: |
+          ./gradlew --version
           java -version
           git status
           echo $JAVA_TOOL_OPTIONS
