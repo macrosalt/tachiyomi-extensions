@@ -34,7 +34,11 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.6
-          distribution: adopt
+      
+      - name: Validate JDK ver
+        run: |
+          java -version
+          git status
 
       - name: Generate multisrc sources
         uses: gradle/gradle-command-action@v2
@@ -81,7 +85,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.6
-          distribution: adopt
+          
 
       - name: Prepare signing key
         run: |
@@ -130,7 +134,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.6
-          distribution: adopt
+          
 
       - name: Prepare signing key
         run: |
@@ -175,7 +179,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.6
-          distribution: adopt
+          
 
       - name: Checkout master branch
         uses: actions/checkout@v3
