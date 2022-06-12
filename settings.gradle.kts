@@ -3,9 +3,6 @@ include(":core")
 include(":lib-dataimage")
 project(":lib-dataimage").projectDir = File("lib/dataimage")
 
-include(":multisrc")
-project(":multisrc").projectDir = File("multisrc")
-
 if (System.getenv("CI") == null || System.getenv("CI_MODULE_GEN") == "true") {
     // Local development (full project build)
 
