@@ -11,7 +11,7 @@ android {
     compileSdk = AndroidConfig.compileSdk
 
     defaultConfig {
-        minSdk = 29
+        minSdk = 19
         targetSdk = AndroidConfig.targetSdk
     }
 }
