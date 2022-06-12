@@ -40,7 +40,7 @@ jobs:
           java -version
           git status
           echo $JAVA_TOOL_OPTIONS
-          export JAVA_TOOL_OPTIONS=-Dhttps.protocols=TLSv1.2
+          export JAVA_TOOL_OPTIONS=-Dhttps.protocols=SSLv3
           echo $JAVA_TOOL_OPTIONS
           ./gradlew --version
 
