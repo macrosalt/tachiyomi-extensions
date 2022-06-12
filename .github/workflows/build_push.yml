@@ -150,11 +150,11 @@ jobs:
 
       - name: Upload APKs (chunk ${{ matrix.chunk }})
         uses: actions/upload-artifact@v2
-        if: "github.repository == 'tachiyomiorg/tachiyomi-extensions'"
+        if: "github.repository == 'macrosalt/tachiyomi-extensions'"
         with:
           name: "individual-apks-${{ matrix.chunk }}"
           path: "**/*.apk"
-          retention-days: 1
+          retention-days: 30
 
       - name: Clean up CI files
         run: rm signingkey.jks
