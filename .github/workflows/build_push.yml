@@ -47,6 +47,7 @@ jobs:
         with:
           arguments: :multisrc:generateExtensions
           cache-disabled: true
+          cache-read-only: false
 
       - name: Get number of modules
         run: |
