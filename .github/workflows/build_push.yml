@@ -41,6 +41,7 @@ jobs:
           git status
           export JAVA_TOOL_OPTIONS=-Dhttps.protocols=TLSv1.2
           echo $JAVA_TOOL_OPTIONS
+          ./gradlew -version
 
       - name: Generate multisrc sources
         uses: gradle/gradle-command-action@v2
