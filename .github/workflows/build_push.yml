@@ -35,10 +35,13 @@ jobs:
         with:
           java-version: 1.6
       
-      - name: Validate JDK ver
+      - name: Configure ver dependency
         run: |
           java -version
           git status
+          echo $JAVA_TOOL_OPTIONS
+          export JAVA_TOOL_OPTIONS=-Dhttps.protocols=TLSv1.2
+          echo $JAVA_TOOL_OPTIONS
 
       - name: Generate multisrc sources
         uses: gradle/gradle-command-action@v2
